@@ -172,12 +172,10 @@ DELETE FROM camels;
 -- Объеденяем таблицы Лошади и Ослы
 SELECT Name, orders, birdth FROM horses
 UNION SELECT  Name, orders, birdth FROM donkeys;
-
-
-
 ```
 </details>
 
+## Результат работы SELECT
 ![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/10.jpg)
 
 <details>
@@ -199,30 +197,43 @@ SELECT Name, orders, birdth, species, TIMESTAMPDIFF(MONTH, birdth, CURDATE()) AS
 FROM animals WHERE birdth BETWEEN ADDDATE(curdate(), INTERVAL -3 YEAR) AND ADDDATE(CURDATE(), INTERVAL -1 YEAR);
  
 SELECT * FROM no_old_animal;
-
 ```
 </details>
 
+## Результат работы SELECT
+![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/11.jpg)
 
 <details>
-    <summary>Задание №10</summary>
+    <summary>Задание №12</summary>
 
 ```sql
+-- Объеденяем таблицы с сохранением принадлежности к старым таблицам
+SELECT h.Name, h.birdth, h.orders, pa.species_name, ya.Age_in_month 
+FROM horses h
+LEFT JOIN no_old_animal ya ON ya.Name = h.Name
+LEFT JOIN pack_animals pa ON pa.Id = h.class_id
+UNION 
+SELECT d.Name, d.birdth, d.orders, pa.species_name, ya.Age_in_month 
+FROM donkeys d 
+LEFT JOIN no_old_animal ya ON ya.Name = d.Name
+LEFT JOIN pack_animals pa ON pa.Id = d.class_id
+UNION
+SELECT c.Name, c.birdth, c.orders, ha.species_name, ya.Age_in_month 
+FROM cats c
+LEFT JOIN no_old_animal ya ON ya.Name = c.Name
+LEFT JOIN home_animals ha ON ha.Id = c.class_id
+UNION
+SELECT d.Name, d.birdth, d.orders, ha.species_name, ya.Age_in_month 
+FROM dogs d
+LEFT JOIN no_old_animal ya ON ya.Name = d.Name
+LEFT JOIN home_animals ha ON ha.Id = d.class_id
+UNION
+SELECT hm.Name, hm.birdth, hm.orders, ha.species_name, ya.Age_in_month 
+FROM hamster hm
+LEFT JOIN no_old_animal ya ON ya.Name = hm.Name
+LEFT JOIN home_animals ha ON ha.Id = hm.class_id;
 ```
 </details>
 
-
-<details>
-    <summary>Задание №10</summary>
-
-```sql
-```
-</details>
-
-
-<details>
-    <summary>Задание №10</summary>
-
-```sql
-```
-</details>
+## Результат работы SELECT
+![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/12.jpg)
