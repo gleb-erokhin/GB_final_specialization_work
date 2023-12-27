@@ -2,7 +2,7 @@
 
 
 <details>
-    <summary>### Задание №8</summary>
+    <summary>Задание №8</summary>
 
 ```sql
 -- Создаем базу данных
@@ -51,7 +51,7 @@ values ('лошади', 1),
 
 
 <details>
-    <summary>### Задание №9</summary>
+    <summary>Задание №9</summary>
 
 ```sql
 -- Домашние животные  
@@ -163,7 +163,7 @@ VALUES ('Вася', 'Есть', '2017-01-21', 2),
 </details>
 
 <details>
-    <summary>### Задание №10</summary>
+    <summary>Задание №10</summary>
 
 ```sql
 -- Удаление таблицы camel
@@ -180,7 +180,7 @@ UNION SELECT  Name, orders, birdth FROM donkeys;
 
 
 <details>
-    <summary>### Задание №11</summary>
+    <summary>Задание №11</summary>
 
 ```sql
 -- Создаем временную таблицу животные, для хранения промежуточных данных
@@ -204,7 +204,7 @@ SELECT * FROM no_old_animal;
 
 
 <details>
-    <summary>### Задание №10</summary>
+    <summary>Задание №10</summary>
 
 ```sql
 ```
@@ -212,7 +212,7 @@ SELECT * FROM no_old_animal;
 
 
 <details>
-    <summary>### Задание №10</summary>
+    <summary>Задание №10</summary>
 
 ```sql
 ```
@@ -220,7 +220,7 @@ SELECT * FROM no_old_animal;
 
 
 <details>
-    <summary>### Задание №10</summary>
+    <summary>Задание №10</summary>
 
 ```sql
 ```
