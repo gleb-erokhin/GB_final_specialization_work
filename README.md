@@ -40,7 +40,7 @@
 </details>
 
 ## Решение
-![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/4.jpg)
+![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/4.png)
 
 ---
 <details>
@@ -49,7 +49,7 @@
 </details>
 
 ## Решение
-![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/5.jpg)
+![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/5.png)
 
 ---
 <details>
@@ -71,7 +71,7 @@
 </details>
 
 ## Решение
-![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/7.jpg)
+![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/7.png)
 
 ---
 <details>
@@ -124,7 +124,7 @@ values ('лошади', 1),
 </details>
 
 ## Решение
-![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/8.jpg)
+![Работа в терминале Linux](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/8.png)
 
 ---
 <details>
