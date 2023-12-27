@@ -173,11 +173,12 @@ DELETE FROM camels;
 SELECT Name, orders, birdth FROM horses
 UNION SELECT  Name, orders, birdth FROM donkeys;
 
-![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/10.jpg)
+
 
 ```
 </details>
 
+![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/10.jpg)
 
 <details>
     <summary>Задание №11</summary>
