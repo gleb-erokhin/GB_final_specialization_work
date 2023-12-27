@@ -132,10 +132,6 @@ values ('лошади', 1),
   Заполнить низкоуровневые таблицы именами(животных), командами
 которые они выполняют и датами рождения
 
-## Решение
-![Работа в Dbeaver](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/9.jpg)
-
----
 ```sql
 -- Домашние животные  
 
@@ -245,6 +241,10 @@ VALUES ('Вася', 'Есть', '2017-01-21', 2),
 ```
 </details>
 
+## Решение
+![Работа в Dbeaver](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/9.jpg)
+
+---
 <details>
     <summary>Задание №10</summary>
   Удалив из таблицы верблюдов, т.к. верблюдов решили перевезти в другой
