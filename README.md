@@ -132,6 +132,10 @@ values ('лошади', 1),
   Заполнить низкоуровневые таблицы именами(животных), командами
 которые они выполняют и датами рождения
 
+## Решение
+![Работа в Dbeaver](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/9.jpg)
+
+---
 ```sql
 -- Домашние животные  
 
@@ -257,8 +261,9 @@ UNION SELECT  Name, orders, birdth FROM donkeys;
 </details>
 
 ## Результат работы SELECT
-![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/10.jpg)
+![Работа в Dbeaver](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/10.jpg)
 
+---
 <details>
     <summary>Задание №11</summary>
   Создать новую таблицу “молодые животные” в которую попадут все
@@ -285,8 +290,9 @@ SELECT * FROM no_old_animal;
 </details>
 
 ## Результат работы SELECT
-![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/11.jpg)
+![Работа в Dbeaver](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/11.jpg)
 
+---
 <details>
     <summary>Задание №12</summary>
   Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
@@ -322,19 +328,4 @@ LEFT JOIN home_animals ha ON ha.Id = hm.class_id;
 </details>
 
 ## Результат работы SELECT
-![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/12.jpg)
-
-
-
-
-
-
-6. 
-7. 
-8. 
-9. 
-10. 
-11.
-12. 
-13.Создать класс с Инкапсуляцией методов и наследованием по диаграмме.
-14. Написать программу, имитирующую работу реестра домашних животных.
+![Работа в Dbeaver](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/12.jpg)
