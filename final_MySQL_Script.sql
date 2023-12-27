@@ -1,10 +1,4 @@
-# GB_final_specialization_work
-
-
-<details>
-    <summary>### Задание №8</summary>
-
-```sql
+-- Задание №8
 -- Создаем базу данных
 CREATE DATABASE People_friends;
 
@@ -46,14 +40,8 @@ insert into pack_animals (species_name, class_id)
 values ('лошади', 1),
 	   ('ослы', 1),
 	   ('верблюды', 1);
-```
-</details>
-
-
-<details>
-    <summary>### Задание №9</summary>
-
-```sql
+	  
+-- Задание п9, 
 -- Домашние животные  
 
 	  
@@ -158,32 +146,20 @@ CREATE TABLE Donkeys (
 INSERT INTO donkeys ( name, orders, birdth, class_id)
 VALUES ('Вася', 'Есть', '2017-01-21', 2),
        ('Иван', 'Прыгать', '2005-03-08', 2);
-
-```
-</details>
-
-<details>
-    <summary>### Задание №10</summary>
-
-```sql
+       
+      
+-- Заание №10
 -- Удаление таблицы camel
+      
 DELETE FROM camels;
 
 -- Объеденяем таблицы Лошади и Ослы
 SELECT Name, orders, birdth FROM horses
 UNION SELECT  Name, orders, birdth FROM donkeys;
 
-![Результат запроса](https://github.com/gleb-erokhin/GB_final_specialization_work/blob/master/10.jpg)
+-- Задание №11
 
-```
-</details>
-
-
-<details>
-    <summary>### Задание №11</summary>
-
-```sql
--- Создаем временную таблицу животные, для хранения промежуточных данных
+-- Создаем временную таблицу животные, для хранение промежуточных данных
 CREATE TEMPORARY TABLE animals AS 
 SELECT *, 'Лошади' as species FROM horses
 UNION SELECT *, 'Ослы' AS species FROM donkeys
@@ -199,29 +175,30 @@ FROM animals WHERE birdth BETWEEN ADDDATE(curdate(), INTERVAL -3 YEAR) AND ADDDA
  
 SELECT * FROM no_old_animal;
 
-```
-</details>
 
-
-<details>
-    <summary>### Задание №10</summary>
-
-```sql
-```
-</details>
-
-
-<details>
-    <summary>### Задание №10</summary>
-
-```sql
-```
-</details>
-
-
-<details>
-    <summary>### Задание №10</summary>
-
-```sql
-```
-</details>
+-- Задание №12
+-- Объеденяем таблицы с сохранением принадлежности к старым таблицам
+SELECT h.Name, h.birdth, h.orders, pa.species_name, ya.Age_in_month 
+FROM horses h
+LEFT JOIN no_old_animal ya ON ya.Name = h.Name
+LEFT JOIN pack_animals pa ON pa.Id = h.class_id
+UNION 
+SELECT d.Name, d.birdth, d.orders, pa.species_name, ya.Age_in_month 
+FROM donkeys d 
+LEFT JOIN no_old_animal ya ON ya.Name = d.Name
+LEFT JOIN pack_animals pa ON pa.Id = d.class_id
+UNION
+SELECT c.Name, c.birdth, c.orders, ha.species_name, ya.Age_in_month 
+FROM cats c
+LEFT JOIN no_old_animal ya ON ya.Name = c.Name
+LEFT JOIN home_animals ha ON ha.Id = c.class_id
+UNION
+SELECT d.Name, d.birdth, d.orders, ha.species_name, ya.Age_in_month 
+FROM dogs d
+LEFT JOIN no_old_animal ya ON ya.Name = d.Name
+LEFT JOIN home_animals ha ON ha.Id = d.class_id
+UNION
+SELECT hm.Name, hm.birdth, hm.orders, ha.species_name, ya.Age_in_month 
+FROM hamster hm
+LEFT JOIN no_old_animal ya ON ya.Name = hm.Name
+LEFT JOIN home_animals ha ON ha.Id = hm.class_id;
